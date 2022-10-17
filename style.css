@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Overpass:wght@400;700&display=swap');
+
+/*reset los margenes de los navegadores terner control*/
+*{
+    margin: 0;
+    padding: 0;
+    /*delimitar las targeta*/
+    box-sizing: border-box;
+}
+:root{
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey:hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 24%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+body{
+    font-family: 'Overpass';
+    font-size: 15px;
+    background-color: var(--Very-Dark-Blue);
+}
+
+.rating-state, .thank-state{
+    width: 329px;
+    height: 360px;
+    border-radius:14px;
+    overflow: hidden;
+    margin: 68px auto 80px;
+    background-color: var(--Dark-Blue);
+    padding: 24px;
+}
+
+.rating-state__icon-container, .rating-state__number-container__number{
+    background: var(--Medium-Grey);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    margin-bottom: 22px;
+    color: var(--Light-Grey);
+    border: none;
+}
+
+.rating-state__title, .thank-state__title{
+    color: var(--White);
+    margin-bottom: 22px;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.rating-state__description, .thank-state__description{
+    color: var(--Light-Grey);
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+.rating-state__number-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-state__number-container__number:hover{
+    background: var(--Light-Grey);
+    color: var(--White);
+    cursor: pointer;
+}
+/*deja seleccionado el hover*/
+.rating-state__number-container__number:focus{
+    background: var(--Orange);
+    color: var(--White); 
+}
+
+.rating-state__butoon-submit{
+    width: 100%;
+    height: 46px;
+    border-radius: 25px;
+    background: var(--Orange);
+    border: none;
+    font-family: 'Overpass';
+    color: var(--White);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.rating-state__butoon-submit:hover{
+    color: var(--Orange);
+    background: var(--White);
+    cursor: pointer;
+}
+
+/*-------------------------Segunda targeta---------*/
+.thank-state{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.thank-state__img-container{
+    width: 150px;
+    margin-bottom: 24px;
+}
+
+.thank-state__selected{
+    width: 170px;
+    height: 36px;
+    border-radius: 50px;
+    background: var(--Medium-Grey);
+    color: var(--Orange);
+    text-align: center;
+    padding: 8px 0;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+.thank-state__description{
+    text-align: center;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/*------------Desktop------------------*/
+@media(min-width: 600px){
+    .rating-state, .thank-state{
+        width: 412px;
+        height: 412px;
+        padding: 34px;
+    }
+    .rating-state__icon-container, .rating-state__number-container__number{
+        width: 50px;
+        height: 50px;
+    }
+    .rating-state__title, .thank-state__title{
+        font-size: 1.9em;
+    }
+    .rating-state__description,.thank-state__description{
+        font-size: 1.07em;
+
+    }
+    .thank-state__selected{
+        font-size: 1em;
+        width: 196px;
+    }
+}
